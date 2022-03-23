@@ -36,8 +36,13 @@ public class RegiaoController {
     }
 
     @PostMapping("regiao/novo")
-    public void putRegiao(Regiao newRegiao){
-        repository.save(newRegiao);
+    public Regiao putRegiao(@RequestBody Regiao newRegiao){
+        return repository.save(newRegiao);
+    }
+
+    @DeleteMapping("regiao/delete/{id}")
+    public void deleteRegiao(@PathVariable Long id){
+        repository.deleteById(id);
     }
 
 }
