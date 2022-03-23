@@ -1,4 +1,6 @@
 package com.dio_class.devweek.Repository;
 
-public interface IncidenciaRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IncidenciaRepo extends JpaRepository {
 }
