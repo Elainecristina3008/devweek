@@ -26,10 +26,6 @@ public class FaixaEtaria {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Long getFaixa_i() {
         return faixa_i;
     }
