@@ -37,7 +37,7 @@ public class FaixaEtariaController {
     @GetMapping("/faixaetaria/{id}")
     public ResponseEntity<?> findByIdFaixaEtaria(@PathVariable long id){
     try{
-        Optional<FaixaEtaria> unidOptional = frepository.findById(id);
+        Optional<FaixaEtaria> unidOptional = faixaEtariaR.findById(id);
         if(unidOptional.isPresent()){
             FaixaEtaria faixaEtariaUnid = unidOptional.get();
             return new ResponseEntity<>(faixaEtariaUnid, HttpStatus.OK);
